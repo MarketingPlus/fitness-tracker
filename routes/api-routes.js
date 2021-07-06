@@ -11,3 +11,15 @@ router.get("/api/workouts", (req, res) => {
             res.json(err);
         });
 });
+
+router.put("/api/workouts/:id", ({ body, params }, res) => {
+    db.Workout.findByIdAndUpdate(
+        params.id,
+        { $push: { exercises: body } },
+        { new: true }
+    ).then(dbWorkout => {
+        res.json(dbWorkout);
+    }).catch(err => {
+        res.json(err);
+    });
+});
