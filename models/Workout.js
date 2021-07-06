@@ -1,6 +1,8 @@
+// depencies for using mongoose
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+// set workout model
 const WorkoutSchema = new Schema(
     {
         day: {
@@ -54,13 +56,16 @@ const WorkoutSchema = new Schema(
     }
 );
 
+// show virtuals graph for totalDuration
 WorkoutSchema.virtual("totalDuration").get(function () {
+    // show exercise to the current total duration
     return this.exercises.reduce((total, exercise) => {
         return total + exercise.duration;
     }, 0);
 });
 
 WorkoutSchema.virtual("totalDistance").get(function () {
+    // show exercise to the current total distance
     return this.exercises.reduce((total, exercise) => {
         return total + exercise.distance;
     }, 0);

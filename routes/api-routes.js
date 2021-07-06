@@ -1,7 +1,10 @@
-
+// dependencies
 const db = require("../models");
 const router = require("express").Router();
 
+// API routes
+
+// GET route
 router.get("/api/workouts", (req, res) => {
     db.Workout.find({})
         .then(dbWorkout => {
@@ -12,6 +15,7 @@ router.get("/api/workouts", (req, res) => {
         });
 });
 
+// PUT route to add excercise
 router.put("/api/workouts/:id", ({ body, params }, res) => {
     db.Workout.findByIdAndUpdate(
         params.id,
@@ -24,6 +28,7 @@ router.put("/api/workouts/:id", ({ body, params }, res) => {
     });
 });
 
+// POST route
 router.post("/api/workouts", ({ body }, res) => {
     db.Workout.create({ body })
         .then(dbWorkout => {

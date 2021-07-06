@@ -1,6 +1,8 @@
+// dependencies
 const path = require("path");
 const router = require("express").Router();
 
+// GET routes to direct to the html pages in public folder
 router.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/index.html"));
 });
