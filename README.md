@@ -6,7 +6,7 @@
 
 A mongoDB application which tracks workouts and allows users to see their progress
 
-![SCREENSHOT](https://user-images.githubusercontent.com/77607177/120912597-eb1ede80-c6d3-11eb-9511-aef3d010584c.png)
+![SCREENSHOT](https://user-images.githubusercontent.com/77607177/124527602-5a116380-de49-11eb-8992-8b7169effd3a.png)
 
 ## TABLE OF CONTENTS
 
@@ -22,7 +22,7 @@ A mongoDB application which tracks workouts and allows users to see their progre
 ## LINKS 🔗
 
 [REPOSITORY](https://github.com/MarketingPlus/fitness-tracker)
-[DEPLOYED](https://mighty-gorge-97116.herokuapp.com/)
+[DEPLOYED](https://damp-woodland-65234.herokuapp.com/)
 
 <a name="features"></a>
 
