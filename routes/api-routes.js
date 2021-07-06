@@ -33,3 +33,13 @@ router.post("/api/workouts", ({ body }, res) => {
             res.json(err);
         });
 });
+
+router.get("/api/workouts/range", function (req, res) {
+    db.Workout.find({}).limit(5)
+        .then(dbWorkout => {
+            res.json(dbWorkout);
+        })
+        .catch(err => {
+            res.json(err);
+        });
+});
